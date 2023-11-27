@@ -39,18 +39,39 @@
             <version>6.0.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+            <version>6.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.27</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+        </dependency>
     </dependencies>
+
     <repositories>
         <repository>
             <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
+            <url>https://repo1.maven.org/maven2/</url>
         </repository>
     </repositories>
 
-<!--    <plugin>-->
-<!--        <groupId>org.apache.tomcat.maven</groupId>-->
-<!--        <artifactId>tomcat7-maven-plugin</artifactId>-->
-<!--        <version>2.2</version>-->
-<!--    </plugin>-->
+    <!--    <plugin>-->
+    <!--        <groupId>org.apache.tomcat.maven</groupId>-->
+    <!--        <artifactId>tomcat7-maven-plugin</artifactId>-->
+    <!--        <version>2.2</version>-->
+    <!--    </plugin>-->
 
 </project>
