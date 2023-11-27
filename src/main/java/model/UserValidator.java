@@ -1,13 +1,18 @@
 package model;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 public class UserValidator {
     public static boolean isValidateUser(String username,String password){
-        if (username.equals("Bandiu")) {
-            return password.equals("1111");
-        }
-        return false;
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        return encoder.matches(password, getEncodedPasswordFromDB(username));
     }
 
+    private static String getEncodedPasswordFromDB(String username){
+
+    }
     private UserValidator() {
     }
 }
+
+
