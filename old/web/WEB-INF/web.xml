@@ -10,7 +10,7 @@
 
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>servlets.HelloServlet</servlet-class>
+        <servlet-class>com.bandiu.fileBr.servlets.HelloServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
@@ -19,7 +19,7 @@
 
     <servlet>
         <servlet-name>IndexServlet</servlet-name>
-        <servlet-class>servlets.IndexServlet</servlet-class>
+        <servlet-class>com.bandiu.fileBr.servlets.IndexServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>
@@ -28,7 +28,7 @@
 
     <servlet>
         <servlet-name>DirEntryServlet</servlet-name>
-        <servlet-class>servlets.DirEntryServlet</servlet-class>
+        <servlet-class>com.bandiu.fileBr.servlets.DirEntryServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>DirEntryServlet</servlet-name>
@@ -37,7 +37,7 @@
 
     <servlet>
         <servlet-name>FileDownloadServlet</servlet-name>
-        <servlet-class>servlets.FileDownloadServlet</servlet-class>
+        <servlet-class>com.bandiu.fileBr.servlets.FileDownloadServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FileDownloadServlet</servlet-name>
@@ -46,7 +46,7 @@
 
     <servlet>
         <servlet-name>OpenTxtServlet</servlet-name>
-        <servlet-class>servlets.OpenTxtServlet</servlet-class>
+        <servlet-class>com.bandiu.fileBr.servlets.OpenTxtServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>OpenTxtServlet</servlet-name>
@@ -54,7 +54,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>SaveTxtServlet</servlet-name>
-        <servlet-class>servlets.SaveTxtServlet</servlet-class>
+        <servlet-class>com.bandiu.fileBr.servlets.SaveTxtServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SaveTxtServlet</servlet-name>
@@ -62,7 +62,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>servlets.LoginServlet</servlet-class>
+        <servlet-class>com.bandiu.fileBr.servlets.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -70,7 +70,7 @@
     </servlet-mapping>
     <filter>
         <filter-name>authenticationFilterServlet</filter-name>
-        <filter-class>servlets.AuthenticationFilterServlet</filter-class>
+        <filter-class>com.bandiu.fileBr.servlets.AuthenticationFilterServlet</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>authenticationFilterServlet</filter-name>
