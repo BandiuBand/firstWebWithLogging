@@ -1,4 +1,4 @@
-package servlets;
+package com.bandiu.fileBr.servlets;
 
 import view.HtmlContentMaker;
 

@@ -1,4 +1,4 @@
-package servlets;
+package com.bandiu.fileBr.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
