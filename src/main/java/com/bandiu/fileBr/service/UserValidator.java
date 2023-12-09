@@ -1,4 +1,4 @@
-package model;
+package com.bandiu.fileBr.service;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
