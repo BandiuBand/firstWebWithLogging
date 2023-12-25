@@ -19,6 +19,7 @@ public class LoginForm {
                     </div>
                     <div>
                         <button type="submit">Login</button>
+                        <a href="/firstWeb/signup" style="display: inline-block; padding: 8px 15px; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold;">Sign Up</a>
                     </div>
                 </form>
             </body>

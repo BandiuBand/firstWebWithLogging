@@ -2,13 +2,14 @@ package servlets;
 
 import model.UserService;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 @WebServlet("/verification")
-public class VerificationServlet {
-    private static final String sucsesful = """
+public class VerificationServlet extends HttpServlet {
+    private static final String successful = """
             <!DOCTYPE html>
             <html lang="en">
             <head>
@@ -36,7 +37,7 @@ public class VerificationServlet {
                 </div>
             </body>
             </html>""";
-    private static final String unsucsesful = """
+    private static final String unsuccessful = """
             <!DOCTYPE html>
             <html lang="en">
             <head>
@@ -72,9 +73,9 @@ public class VerificationServlet {
         PrintWriter writer = response.getWriter();
         String responseText="";
         if (UserService.verificationUser(username,verToken))
-            responseText = sucsesful;
+            responseText = successful;
         else
-            responseText = unsucsesful;
+            responseText = unsuccessful;
         writer.write(responseText);
 
     }

@@ -17,7 +17,7 @@ public class User{
 
     private Date createDate;
 
-    private String validationToken;
+    private String verificationToken;
     private boolean isValidated;
 
     public String getUsername() {
@@ -52,12 +52,12 @@ public class User{
         this.createDate = createDate;
     }
 
-    public String getValidationToken() {
-        return validationToken;
+    public String getVerificationToken() {
+        return verificationToken;
     }
 
-    public void setValidationToken(String validationToken) {
-        this.validationToken = validationToken;
+    public void setVerificationToken(String verificationToken) {
+        this.verificationToken = verificationToken;
     }
 
     public boolean isValidated() {
@@ -68,12 +68,12 @@ public class User{
         isValidated = validated;
     }
 
-    public User(String username, String passwordHash, String email, Date createDate, String validationToken, boolean isValidated) {
+    public User(String username, String passwordHash, String email, Date createDate, String verificationToken, boolean isValidated) {
         this.username = username;
         this.passwordHash = passwordHash;
         this.email = email;
         this.createDate = createDate;
-        this.validationToken = validationToken;
+        this.verificationToken = verificationToken;
         this.isValidated = isValidated;
     }
 }

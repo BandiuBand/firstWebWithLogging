@@ -68,6 +68,22 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>SignUpServlet</servlet-name>
+        <servlet-class>servlets.SignUpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>VerificationServlet</servlet-name>
+        <servlet-class>servlets.VerificationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerificationServlet</servlet-name>
+        <url-pattern>/verification</url-pattern>
+    </servlet-mapping>
     <filter>
         <filter-name>authenticationFilterServlet</filter-name>
         <filter-class>servlets.AuthenticationFilterServlet</filter-class>

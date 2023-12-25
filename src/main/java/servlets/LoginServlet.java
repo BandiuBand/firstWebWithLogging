@@ -1,8 +1,8 @@
 package servlets;
 
-import model.UserValidator;
-import view.LoginForm;
 
+import view.LoginForm;
+import model.UserService;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -17,7 +17,7 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
 
-        if (UserValidator.isValidateUser(username, password)) {
+        if (UserService.isValidUser(username,password)) {
             HttpSession session = request.getSession();
             session.setAttribute("username", username);
             System.out.println(session.getAttribute("username"));

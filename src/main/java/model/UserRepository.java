@@ -16,7 +16,7 @@ import java.util.Date;
 public class UserRepository{
     private static UserRepository userRepository;
     private static final String DBLINK="mongodb://localhost:27017";
-    private static final String DBNAME="FBIB";
+    private static final String DBNAME="FBinB";
     private static MongoClient mongoClient;
     private static MongoDatabase mongoDatabase;
     private static final String USERS_COLLECTION_NAME = "users";
@@ -59,7 +59,7 @@ public class UserRepository{
             String username = user.getUsername();
             String passwordHash = user.getPasswordHash();
             String email = user.getEmail();
-            String validationCode = user.getValidationToken();
+            String validationCode = user.getVerificationToken();
             boolean isValidated = user.isValidated();
             Date creationDate;
             try {
@@ -83,7 +83,7 @@ public class UserRepository{
             String username = user.getUsername();
             String passwordHash = user.getPasswordHash();
             String email = user.getEmail();
-            String validationCode = user.getValidationToken();
+            String validationCode = user.getVerificationToken();
             boolean isValidated = user.isValidated();
             Date creationDate;
             try {
@@ -98,6 +98,9 @@ public class UserRepository{
 
         private User getUserByDocument(Document document){
             Document userDoc = getUserDocByDocument(document);
+            if (userDoc==null) {
+                return null;
+            }
             String username = (String)userDoc.get("username");
             String passwordHash = (String) userDoc.get("passwordHash");
             String email = (String) userDoc.get("email");
@@ -127,8 +130,8 @@ public class UserRepository{
         public User getUserByEmail (String email){
             return getUserByDocument(new Document("email",email));
         }
-        public User getUserByValidationCode(String validationCode){
-            return getUserByDocument(new Document("validationCode",validationCode));
+        public User getUserByVerificationCode(String verificationToken){
+            return getUserByDocument(new Document("validationCode",verificationToken));
         }
 
 
