@@ -22,7 +22,7 @@ public class AuthenticationFilterServlet implements Filter {
 
         String path = httpRequest.getRequestURI();
         System.out.println(path);
-        if (path.startsWith("/firstWeb/login")) {
+        if (path.startsWith("/firstWeb/login")||path.startsWith("/firstWeb/verification")) {
 
             chain.doFilter(request, response);
             return;
