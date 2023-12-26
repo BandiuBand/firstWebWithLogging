@@ -15,11 +15,11 @@ import java.util.Date;
 
 public class UserRepository{
     private static UserRepository userRepository;
-    private static final String DBLINK="mongodb://localhost:27017";
-    private static final String DBNAME="FBinB";
+    private static final String DBLINK=Config.getDblink();
+    private static final String DBNAME=Config.getDbname();
     private static MongoClient mongoClient;
     private static MongoDatabase mongoDatabase;
-    private static final String USERS_COLLECTION_NAME = "users";
+    private static final String USERS_COLLECTION_NAME = Config.getUsersCollectionName();
     private static MongoCollection<Document> usersCollection;
 
         private UserRepository(String link,String name) {

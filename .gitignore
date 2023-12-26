@@ -37,3 +37,4 @@ build/
 ### Mac OS ###
 .DS_Store
 /src/main/java/servlets/teory
+/src/main/java/model/Config.java
