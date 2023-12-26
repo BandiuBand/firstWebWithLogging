@@ -5,6 +5,8 @@ public class SignUpForm {
             <!DOCTYPE html>
             <html>
             <head>
+            
+                <meta charset="UTF-8">
                 <title>Sign up successful</title>
             </head>
             <body>

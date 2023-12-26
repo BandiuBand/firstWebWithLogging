@@ -115,7 +115,7 @@ public class UserRepository{
             Document res;
 
             try {
-                res = usersCollection.find(Filters.eq(document)).first();
+                res = usersCollection.find(Filters.eq("username", document.getString("username"))).first();
             } catch (Exception e){
                 System.out.println("getting user error");
                 e.printStackTrace();

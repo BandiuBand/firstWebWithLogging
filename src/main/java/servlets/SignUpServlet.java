@@ -28,13 +28,15 @@ public class SignUpServlet extends HttpServlet{
 
         UserService.createUser(username,passwordHash,email);
 
-
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
         Writer writer = response.getWriter();
         writer.write(SignUpForm.getContentAfter());
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
         Writer writer = response.getWriter();
         writer.write(SignUpForm.getContent());
     }

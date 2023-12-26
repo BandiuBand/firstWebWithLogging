@@ -31,7 +31,8 @@ public class AuthenticationFilterServlet implements Filter {
             System.out.println("ses = null");
 
         if (session == null || (String)session.getAttribute("username") == null) {
-            httpResponse.sendRedirect("login");
+            httpResponse.sendRedirect("/firstWeb/login");
+            System.out.println("Access prohibited");
 
         } else {
             chain.doFilter(request, response);

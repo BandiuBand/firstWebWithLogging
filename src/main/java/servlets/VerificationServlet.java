@@ -76,6 +76,10 @@ public class VerificationServlet extends HttpServlet {
             responseText = successful;
         else
             responseText = unsuccessful;
+        System.out.println(responseText);
+
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
         writer.write(responseText);
 
     }

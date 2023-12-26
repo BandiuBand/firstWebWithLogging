@@ -23,6 +23,7 @@ public class EmailService {
                 .text(body)
                 .build()
                 .send();
+        System.out.println(body);
     }
     private EmailService(){}
 }
